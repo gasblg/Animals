@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+>
+    <data>
+        <import type="java.lang.String"/>
+
+        <variable name="kind"
+                  type="com.wildtech.animals.model.Kind"/>
+    </data>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_kinds"
+    >
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+        >
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/idKind"
+                      android:layout_marginStart="15dp"
+                      android:textColor="#000000"
+                      android:text="@{String.valueOf(kind.id)}"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/nameKind"
+                      android:layout_marginStart="55dp"
+                      android:textColor="#000000"
+                      android:text="@{kind.name}"
+
+            />
+        </androidx.cardview.widget.CardView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

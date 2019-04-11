@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_graph"
+            app:startDestination="@id/kindListFragment">
+
+    <fragment android:id="@+id/kindListFragment" android:name="com.wildtech.animals.kindlist.KindListFragment"
+              android:label="fragment_kind" tools:layout="@layout/fragment_kind_list">
+        <action android:id="@+id/action_kindListFragment_to_kindAddFragment" app:destination="@id/kindAddFragment"/>
+        <action android:id="@+id/action_kindListFragment_to_kindEditFragment" app:destination="@id/kindEditFragment"
+                app:enterAnim="@anim/nav_default_enter_anim" app:exitAnim="@anim/nav_default_exit_anim"
+                app:popUpTo="@id/kindListFragment" app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment android:id="@+id/kindAddFragment" android:name="com.wildtech.animals.kindadd.KindAddFragment"
+              android:label="fragment_kind_add" tools:layout="@layout/fragment_kind_add"/>
+    <fragment android:id="@+id/kindEditFragment" android:name="com.wildtech.animals.kindedit.KindEditFragment"
+              android:label="fragment_kind_edit" tools:layout="@layout/fragment_kind_edit"/>
+</navigation>
